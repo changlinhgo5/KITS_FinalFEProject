@@ -1,0 +1,49 @@
+@import "../../index.scss";
+
+.main {
+  // background-color: #ffdee9;
+  // background-image: linear-gradient(45deg, #ffdee9 0%, #b5fffc 100%);
+  // bottom: 0;
+  // left: 0;
+  // position: fixed;
+  // right: 0;
+  // top: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  height: 60rem;
+  width: 39rem;
+  background-color: #181818;
+  border-radius: 0.4rem;
+}
+
+.option {
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.bar__icon {
+  height: 95%;
+  font-size: 5.6rem;
+  padding: 0rem 2rem;
+
+  &:hover {
+    background-color: #3f3f3f;
+    border-radius: 0.5rem;
+    transition: ease-out 0.3s all;
+  }
+}
+
+.group__button {
+  height: 60%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}

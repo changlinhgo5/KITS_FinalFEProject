@@ -1,0 +1,71 @@
+@import "../../../index.scss";
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.display__time {
+  width: 35rem;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: auto;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 97%;
+  height: 97%;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: 1;
+    border: 0.3rem solid #333333;
+  }
+
+  &.true {
+    background-image: linear-gradient(to top, #a8e063, #56ab2f);
+  }
+
+  &.false {
+    background-image: linear-gradient(to top, #e29587, #d66d75);
+  }
+}
+
+.session__title {
+  font-size: 3rem;
+  color: $textColor;
+  margin: 0 0 4rem 0;
+}
+
+.time__remaining {
+  font-size: 2rem;
+  color: $textColor;
+}
+
+.display__button {
+  cursor: pointer;
+  width: 20rem;
+  border: 0.1rem solid #333333;
+  border-radius: 99.99rem;
+  margin-top: 5rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: #05182b;
+  padding: 1.8rem 5rem;
+}

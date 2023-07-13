@@ -1,0 +1,41 @@
+@import "../../index.scss";
+
+.title {
+  font-size: 3rem;
+  color: $textColor;
+  line-height: 3rem;
+  margin: 2rem 0;
+}
+
+.quote__action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.quote__input {
+  width: 30%;
+  margin-right: 2rem;
+}
+
+.quote__col {
+  margin-bottom: 1rem;
+}
+
+.quote__card {
+  height: 24rem;
+  // background-color: #e1e1e1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // white-space: wrap;
+  display: -webkit-box;
+  line-clamp: 7;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+}
+
+.quote__content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

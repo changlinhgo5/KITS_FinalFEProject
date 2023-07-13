@@ -1,0 +1,31 @@
+.modal__row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modal__label {
+  width: 50%;
+}
+
+.modal__switch {
+  min-width: 5.2rem;
+}
+
+.modal__select {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal__option {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  & span {
+    margin-left: 0.4rem;
+  }
+}
