@@ -1,10 +1,10 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import DefaultLayout from "./components/layouts";
-import { privateRoutes, loginRoutes } from "./routes/index";
-import "./App.module.scss";
 import { ConfigProvider } from "antd";
 import { useState } from "react";
-import { themeLight, themeDark } from "../src/constants/index";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { themeLight } from "../src/constants/index";
+import "./App.module.scss";
+import DefaultLayout from "./components/layouts";
+import { loginRoutes, privateRoutes } from "./routes/index";
 
 function App() {
   const [token, setToken] = useState(null);
