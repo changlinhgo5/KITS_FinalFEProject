@@ -6,13 +6,15 @@ import LoginPage from "../pages/login";
 import PomodoroPage from "../pages/pomodoro/App";
 import QuotePage from "../pages/quote";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 export const privateRoutes = [
-  { path: "/chessboard", component: ChessBoardPage },
-  { path: "/pomodoro", component: PomodoroPage },
-  { path: "/calculator", component: CalculatorPage },
-  { path: "/quotes", component: QuotePage },
-  { path: "/forminfo", component: FormInfo },
-  { path: "/", component: Home },
+  { path: `${baseUrl}/chessboard`, component: ChessBoardPage },
+  { path: `${baseUrl}/pomodoro`, component: PomodoroPage },
+  { path: `${baseUrl}/calculator`, component: CalculatorPage },
+  { path: `${baseUrl}/quotes`, component: QuotePage },
+  { path: `${baseUrl}/forminfo`, component: FormInfo },
+  { path: `${baseUrl}/`, component: Home },
 ];
 
-export const loginRoutes = { path: "/login", component: LoginPage };
+export const loginRoutes = { path: `${baseUrl}/login`, component: LoginPage };

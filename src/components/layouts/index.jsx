@@ -6,7 +6,7 @@ import {
   Input,
   Layout,
   Menu,
-  Space
+  Space,
 } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { Content, Footer, Header } from "antd/es/layout/layout";
@@ -25,7 +25,7 @@ import {
   FaMagnifyingGlass,
   FaRegBell,
   FaRegMessage,
-  FaUser
+  FaUser,
 } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 import fallbackAvatar from "../../assets/fallback-avatar.jpg";
@@ -37,6 +37,7 @@ import ModalComponent from "../modal";
 import styles from "./defaultLayout.module.scss";
 
 const cx = classNames.bind(styles);
+const baseUrl = import.meta.env.BASE_URL;
 
 const DefaultLayout = ({ children, theme, setTheme, setToken, token }) => {
   let location = useLocation();
@@ -97,32 +98,32 @@ const DefaultLayout = ({ children, theme, setTheme, setToken, token }) => {
   const itemsMenu = [
     {
       key: "/",
-      label: <Link to={"/"}>{t("Home")}</Link>,
+      label: <Link to={`${baseUrl}/`}>{t("Home")}</Link>,
       icon: <FaHouseChimney />,
     },
     {
       key: "/chessboard",
-      label: <Link to={"/chessboard"}>{t("Chessboard")}</Link>,
+      label: <Link to={`${baseUrl}/chessboard`}>{t("Chessboard")}</Link>,
       icon: <FaChessKnight />,
     },
     {
       key: "/pomodoro",
-      label: <Link to={"/pomodoro"}>{t("Pomodoro")}</Link>,
+      label: <Link to={`${baseUrl}/pomodoro`}>{t("Pomodoro")}</Link>,
       icon: <FaClock />,
     },
     {
       key: "/calculator",
-      label: <Link to={"/calculator"}>{t("Calculator")}</Link>,
+      label: <Link to={`${baseUrl}/calculator`}>{t("Calculator")}</Link>,
       icon: <FaCalculator />,
     },
     {
       key: "/forminfo",
-      label: <Link to={"/forminfo"}>{t("Form")}</Link>,
+      label: <Link to={`${baseUrl}/forminfo`}>{t("Form")}</Link>,
       icon: <FaFileLines />,
     },
     {
       key: "/quote",
-      label: <Link to={"/quotes"}>{t("Quotes")}</Link>,
+      label: <Link to={`${baseUrl}/quotes`}>{t("Quotes")}</Link>,
       icon: <FaQuoteLeft />,
     },
   ];

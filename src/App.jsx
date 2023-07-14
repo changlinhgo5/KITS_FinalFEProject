@@ -6,12 +6,14 @@ import "./App.module.scss";
 import DefaultLayout from "./components/layouts";
 import { loginRoutes, privateRoutes } from "./routes/index";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 function App() {
   const [token, setToken] = useState(null);
   const [theme, setTheme] = useState(themeLight);
 
   const LoginRoutesComponent = loginRoutes.component;
-
+  // console.log(baseUrl)
   return (
     <>
       <ConfigProvider theme={theme}>
@@ -35,7 +37,8 @@ function App() {
                       <Page />
                     </DefaultLayout>
                   ) : (
-                    <Navigate to={"/login"} />
+                    // <Navigate to={"/login"} />
+                    <Navigate to={`${baseUrl}/login`} />
                   )
                 }
                 path={path}

@@ -6,13 +6,14 @@ import { FaLock, FaUser } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
 const cx = classNames.bind(styles);
+const baseUrl = import.meta.env.BASE_URL;
 
 const LoginPage = ({ token, setToken }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
     if (token) {
-      navigate("/");
+      navigate(`${baseUrl}/`);
     }
   }, [navigate, token]);
 
