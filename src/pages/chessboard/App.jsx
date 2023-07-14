@@ -63,15 +63,15 @@ function ChessBoardPage() {
             </div>
           </div>
         </form>
-
-        <ChessBoard
-          size={size}
-          whiteColor={whiteColor}
-          blackColor={blackColor}
-          isSwapped={isSwapped}
-          onClick={handleSwappedColor}
-        />
       </Card>
+
+      <ChessBoard
+        size={size}
+        whiteColor={whiteColor}
+        blackColor={blackColor}
+        isSwapped={isSwapped}
+        onClick={handleSwappedColor}
+      />
     </>
   );
 }

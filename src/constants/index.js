@@ -13,6 +13,7 @@ export const themeDark = {
   token: {
     colorPrimary: "#00b96b",
     colorText: "#ffffff",
+    colorBgLayout: "#252525",
   },
   components: {},
 };
