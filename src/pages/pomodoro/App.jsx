@@ -6,10 +6,13 @@ import { useState, useEffect } from "react";
 import ModalSetting from "./modalSetting/index";
 import Modal from "antd/es/modal/Modal";
 import Title from "antd/es/typography/Title";
+import { useTranslation } from "react-i18next";
 
 const cx = classNames.bind(styles);
 
 function PomodoroPage() {
+  const { i18n, t } = useTranslation();
+
   const [currentTime, setCurrentTime] = useState(new Date());
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [sessionTime, setSessionTime] = useState(12);
@@ -47,7 +50,7 @@ function PomodoroPage() {
           </Title>
         </div>
         <div className={cx("title")}>
-          <Title level={1}>Pomodoro Clock</Title>
+          <Title level={1}>{t("Pomodoro")}</Title>
         </div>
 
         <Title className={cx("date__now")}>

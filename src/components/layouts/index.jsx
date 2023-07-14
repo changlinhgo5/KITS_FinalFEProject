@@ -37,6 +37,7 @@ import ModalComponent from "../modal";
 import styles from "./defaultLayout.module.scss";
 
 const cx = classNames.bind(styles);
+
 const baseUrl = import.meta.env.BASE_URL;
 
 const DefaultLayout = ({ children, theme, setTheme, setToken, token }) => {

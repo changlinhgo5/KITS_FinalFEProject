@@ -11,9 +11,9 @@ const cx = classNames.bind(styles);
 const Home = () => {
   return (
     <>
-      <Title level={2} className={cx("title")}>
+      {/* <Title level={2} className={cx("title")}>
         Đặng Thái Sơn
-      </Title>
+      </Title> */}
       <Carousel
         className={cx("carousel")}
         dots={true}

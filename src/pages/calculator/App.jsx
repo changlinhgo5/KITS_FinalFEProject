@@ -5,10 +5,14 @@ import Display from "./display/index";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { LuDelete } from "react-icons/lu";
+import { useTranslation } from "react-i18next";
+import Title from "antd/es/typography/Title";
 
 const cx = classNames.bind(styles);
 
 function CalculatorPage() {
+  const { i18n, t } = useTranslation();
+
   const [input, setInput] = useState("");
   const [previousNumber, setPreviousNumber] = useState("");
   const [operator, setOperator] = useState("");
@@ -119,6 +123,7 @@ function CalculatorPage() {
 
   return (
     <>
+      <Title level={2}>{t("Calculator")}</Title>
       <div className={cx("main")}>
         <div className={cx("wrapper")}>
           <div className={cx("option")}>

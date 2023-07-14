@@ -5,6 +5,7 @@ import { themeLight } from "../src/constants/index";
 import "./App.module.scss";
 import DefaultLayout from "./components/layouts";
 import { loginRoutes, privateRoutes } from "./routes/index";
+import Title from "antd/es/typography/Title";
 
 const baseUrl = import.meta.env.BASE_URL;
 

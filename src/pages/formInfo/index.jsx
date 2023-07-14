@@ -12,6 +12,7 @@ import {
 import { FaEnvelope, FaMarsAndVenus, FaUser } from "react-icons/fa6";
 import React, { useState } from "react";
 import Title from "antd/es/typography/Title";
+import { useTranslation } from "react-i18next";
 
 const cx = classNames.bind(styles);
 
@@ -31,6 +32,8 @@ const genders = [
 ];
 
 const FormInfo = () => {
+  const { i18n, t } = useTranslation();
+
   const [form] = Form.useForm();
   const [textInfo, setTextInfo] = useState({});
 
@@ -52,9 +55,10 @@ const FormInfo = () => {
 
   return (
     <>
+      <Title level={2}>{t("Form")}</Title>
       <Card className={cx("form__wrapper")}>
         <Title level={2} className={cx("title")}>
-          Form Info
+          Form Infomation
         </Title>
 
         <Form

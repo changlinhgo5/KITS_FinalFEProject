@@ -3,10 +3,13 @@ import styles from "./quote.module.scss";
 import { useEffect, useState } from "react";
 import { Button, Card, Col, Input, Row } from "antd";
 import Title from "antd/es/typography/Title";
+import { useTranslation } from "react-i18next";
 
 const cx = classNames.bind(styles);
 
 const QuotePage = ({ token }) => {
+  const { i18n, t } = useTranslation();
+
   const [quotes, setQuotes] = useState([]);
   const [quotesNum, setQuotesNum] = useState(0);
 
@@ -38,9 +41,10 @@ const QuotePage = ({ token }) => {
 
   return (
     <>
-      <Title level={2} className={cx("title")}>
+      {/* <Title level={2} className={cx("title")}>
         Quotes of the day:
-      </Title>
+      </Title> */}
+      <Title level={2}>{t("Quotes")}</Title>
       <div className={cx("quote__action")}>
         <Input
           className={cx("quote__input")}
